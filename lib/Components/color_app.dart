@@ -6,7 +6,7 @@ class ColorLightApp{
   static const  greyBttn = Color.fromARGB(255, 159, 159, 159);
   static const  blueBttn = Color.fromARGB(255, 32, 135, 255);
   static const  numbers = Color.fromARGB(255, 255, 255, 255);
-  static const  backNumbers = Color.fromARGB(255, 164, 164, 164);
+  static const  backNumbers = Color.fromARGB(255, 125, 125, 125);
   static ThemeData lightTheme = ThemeData(
     scaffoldBackgroundColor: Color.fromARGB(255, 34, 34, 34),
     brightness: Brightness.light

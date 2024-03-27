@@ -53,6 +53,7 @@ class _MyCalcState extends State<MyCalc> {
   String result = '';
 
   String operation = '';
+  int num = 0;
 
   void btnOnClick(String bttnVal) {
     if (bttnVal == 'c') {
@@ -109,7 +110,7 @@ class _MyCalcState extends State<MyCalc> {
     });
   }
 
-  int num = 0;
+  
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
@@ -130,6 +131,9 @@ class _MyCalcState extends State<MyCalc> {
                       builder: (context) => IconButton(
                         onPressed: () {
                           setState(() {
+                            if (num==0) {
+                              num++;
+                            }else{num--;}
                             var brightness =
                                 ThemeModelInheritedNotifier.of(context)
                                     .theme
@@ -174,7 +178,7 @@ class _MyCalcState extends State<MyCalc> {
                   padding: const EdgeInsets.fromLTRB(0, 0, 28, 2),
                   child: Text(
                     history,
-                    style: const TextStyle(
+                    style:  TextStyle(
                         color: ColorLightApp.backNumbers, fontSize: 24),
                   ),
                 ),
@@ -187,8 +191,8 @@ class _MyCalcState extends State<MyCalc> {
                   padding: const EdgeInsets.fromLTRB(0, 0, 28, 40),
                   child: Text(
                     textToDisplay,
-                    style: const TextStyle(
-                        color: ColorLightApp.numbers, fontSize: 48),
+                    style:  TextStyle(
+                        color:num==0? ColorLightApp.numbers:Colors.black, fontSize: 48),
                   ),
                 ),
               ),
