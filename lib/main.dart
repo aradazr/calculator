@@ -4,6 +4,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:animated_theme_switcher/animated_theme_switcher.dart';
 
+
+
+
+
+
+
+
+
+
+
+
+
 void main() {
   runApp(const MyApp());
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
@@ -161,8 +173,8 @@ class _MyCalcState extends State<MyCalc> {
                                       .theme
                                       .brightness ==
                                   Brightness.light
-                              ? Icons.dark_mode
-                              : Icons.light_mode,
+                              ? Icons.light_mode
+                              : Icons.dark_mode,
                         ),
                       ),
                     ),
